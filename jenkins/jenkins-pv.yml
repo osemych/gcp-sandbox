@@ -10,4 +10,4 @@ spec:
     - ReadWriteOnce
   gcePersistentDisk:
     fsType: ext4
-    pdName: jenkins-home-volume
+    pdName: jenkins-disk
