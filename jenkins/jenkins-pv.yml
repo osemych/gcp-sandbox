@@ -10,6 +10,6 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  GCEPersistentDisk:
+  gcePersistentDisk:
     fsType: ext4
     pdName: disk-1
