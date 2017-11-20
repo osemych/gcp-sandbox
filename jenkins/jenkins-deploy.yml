@@ -21,7 +21,7 @@ spec:
   template:
     metadata:
       labels:
-        app: master
+        app: jenkins-master
     spec:
       containers:
       - name: master
