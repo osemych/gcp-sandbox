@@ -17,6 +17,8 @@ kind: Deployment
 metadata:
   name: jenkins-master
   namespace: jenkins
+  labels:
+    app: jenkins
 spec:
   replicas: 1
   template:
@@ -25,7 +27,7 @@ spec:
         app: jenkins-master
     spec:
       containers:
-      - name: master
+      - name: jenkins-master
         image: jenkins/jenkins:2.89-alpine
         ports:
         - containerPort: 8080
@@ -58,5 +60,6 @@ spec:
             memory: 1600Mi
       volumes:
       - name: jenkins-volume
-        persistentVolumeClaim:
-          claimName: jenkins-volume-claim
+        gcePersistentDisk:
+          fsType: ext4
+          pdName: jenkins-disk
