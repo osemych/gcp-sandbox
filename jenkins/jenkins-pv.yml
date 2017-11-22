@@ -5,7 +5,7 @@ metadata:
   namespace: jenkins
 spec:
   capacity:
-    storage: 12Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
   gcePersistentDisk:
